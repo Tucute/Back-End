@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('avatar');
             $table->string('password');
             $table->boolean('isActive');
+            $table->string('address');
             $table->unsignedInteger('role_id');
             $table->foreign('role_id')->references('id')->on('roles');
             $table->timestamps();

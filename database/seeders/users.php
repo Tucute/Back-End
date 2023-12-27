@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class users extends Seeder
 {
@@ -23,7 +24,8 @@ class users extends Seeder
                 "avatar" => "https://i.pinimg.com/564x/df/ce/a7/dfcea7989195d3273c2bcb367fca0a83.jpg",
                 "phone" => "0936473634",
                 "isActive" => true,
-                "password" => "335456dfdf",
+                "address" => "101B Le Huu Trac, Phuoc My, Son Tra, Da Nang",
+                "password" => Hash::make("335456dfdf"),
                 "role_id" => 1,
             ],
             [
@@ -33,7 +35,8 @@ class users extends Seeder
                 "avatar" => "https://png.pngtree.com/png-clipart/20190904/original/pngtree-cartoon-couple-avatar-design-material-png-image_4460214.jpg",
                 "phone" => "0463434355",
                 "isActive" => true,
-                "password" => "quang@1234",
+                "address" => "Dak Pet, Dak Glei, Kon Tum",
+                "password" => Hash::make("quang@1234"),
                 "role_id" => 1,
             ],
             [
@@ -43,7 +46,8 @@ class users extends Seeder
                 "avatar" => "https://anhcuoiviet.vn/wp-content/uploads/2022/11/avatar-dep-dang-yeu-nu-5.jpg",
                 "phone" => "0385456789",
                 "isActive" => true,
-                "password" => "huu08232",
+                "address" => "101B Le Huu Trac, Phuoc My, Son Tra, Da Nang",
+                "password" => Hash::make("huu08232"),
                 "role_id" => 3,
             ],
             [
@@ -53,7 +57,8 @@ class users extends Seeder
                 "avatar" => "https://www.prettywoman.vn/wp-content/uploads/2023/06/hinh-anh-avatar-nam-1-600x600.jpg",
                 "phone" => "0943487676",
                 "isActive" => true,
-                "password" => "34354646",
+                "address" => "Dak Rang, Dak Pet, Dak Glei, Kon Tum",
+                "password" => Hash::make("34354646"),
                 "role_id" => 2
             ],
             [
@@ -63,7 +68,8 @@ class users extends Seeder
                 "avatar" => "https://cdn.sforum.vn/sforum/wp-content/uploads/2023/11/avatar-dep-105.jpg",
                 "phone" => "0454534389",
                 "isActive" => true,
-                "password" => "thiendamdao13",
+                "address" => "46 Nguyễn Văn Thoại, Bắc Mỹ Phú, Ngũ Hành Sơn, Đà Nẵng 550000, Vietnam",
+                "password" => Hash::make("thiendamdao13"),
                 "role_id" => 2
             ],
             [
@@ -73,7 +79,8 @@ class users extends Seeder
                 "avatar" => "https://bizweb.dktcdn.net/100/438/408/files/avatar-hai-yody-vn-70.jpg?v=1700117706562",
                 "phone" => "0454352436",
                 "isActive" => true,
-                "password" => "Luanhamdao98",
+                "address" => "4R7H+76, Thôn 1, Tp. Quảng Ngãi, Quảng Ngãi, Vietnam",
+                "password" => Hash::make("Luanhamdao98"),
                 "role_id" => 2
             ],
             [
@@ -83,7 +90,8 @@ class users extends Seeder
                 "avatar" => "https://demoda.vn/wp-content/uploads/2022/01/avatar-den-trang-buon-600x600.jpg",
                 "phone" => "0534347654",
                 "isActive" => true,
-                "password" => "233sON444",
+                "address" => "Gia Hoa Village, 523A Hém 445, Phước Long B, Quận 9, Thành phố Hồ Chí Minh, Vietnam",
+                "password" => Hash::make("233sON444"),
                 "role_id" => 2
             ],
             [
@@ -93,7 +101,8 @@ class users extends Seeder
                 "avatar" => "https://live.staticflickr.com/4125/35621911731_185633817e.jpg",
                 "phone" => "0244315456",
                 "isActive" => true,
-                "password" => "huongdaumoi03",
+                "address" => "Q4QX+XXF, Thừa Đức, Cẩm Mỹ, Đồng Nai, Vietnam",
+                "password" => Hash::make("huongdaumoi03"),
                 "role_id" => 2
             ],
             [
@@ -103,7 +112,8 @@ class users extends Seeder
                 "avatar" => "https://hoanghamobile.com/tin-tuc/wp-content/uploads/2023/07/avatar-dep-29.jpg",
                 "phone" => "0835465657",
                 "isActive" => true,
-                "password" => "deptraikhoiche26",
+                "address" => "Quốc lộ 1D, Tổ 1, Khu vực 8, Thành phố Qui Nhơn, Bình Định 55118, Vietnam",
+                "password" => Hash::make("deptraikhoiche26"),
                 "role_id" => 2
             ],
             [
@@ -113,7 +123,8 @@ class users extends Seeder
                 "avatar" => "https://demoda.vn/wp-content/uploads/2022/02/avatar-hai-600x600.jpg",
                 "phone" => "0434354678",
                 "isActive" => true,
-                "password" => "hiepga22",
+                "address" => "2MRW+P5, Xuõn An, An Khê, Gia Lai, Vietnam",
+                "password" => Hash::make("hiepga22"),
                 "role_id" => 2
                 ]
         ]);
