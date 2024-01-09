@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
             users::class,
             categories::class,
             products::class,
+            rating::class,
         ]);
     }
 }

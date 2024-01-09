@@ -98,4 +98,36 @@ class UserController extends Controller
             'message' => 'Đăng xuất thành công',
         ]);
     }
+
+    public function UpdateUser(Request $request) {
+        if (auth('sanctum')->check()) {
+            $userid = auth('sanctum')->user()->id;
+            $user = User::find($userid);
+    
+            if ($user) {
+                $user->name = $request->name;
+                $user->phone = $request->phone;
+                $user->email = $request->email;
+                $user->address = $request->address;
+                
+                $user->save();
+    
+                return response()->json([
+                    'status' => 200,
+                    'message' => 'Update successfully',
+                ]);
+            } else {
+                return response()->json([
+                    'status' => 404,
+                    'message' => 'User not found',
+                ], 404);
+            }
+        } else {
+            return response()->json([
+                'status' => 401,
+                'message' => 'Unauthorized',
+            ], 401);
+        }
+    }
+    
 }
