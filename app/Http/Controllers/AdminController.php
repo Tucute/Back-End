@@ -34,7 +34,7 @@ class AdminController extends Controller
             $product->image = $request->image;
             $product->category_id = $request->category_id;
             $product->description = $request->description;
-            $product->supplier_id = $user_id;
+            $product->supplier_id = $request->$user_id;
             $product->save();
             return response()->json([
                 'status' => 200,
@@ -67,25 +67,4 @@ class AdminController extends Controller
             ]);
         }
     }
-    // public function Order() {
-    //     if (auth('sanctum')->check()) {
-
-    //         $user_id = auth('sanctum')->user()->id;
-
-    //         $shop_id = Shops::where('user_id', $user_id)->pluck('id');
-
-    //         $order =DB::table('tbl_orders')
-    //         ->whereIn('cart_id', function ($query) use ($shop_id) {
-    //             $query->select('id')
-    //                 ->from('carts')
-    //                 ->whereIn('product_id', function ($subquery) use ($shop_id) {
-    //                     $subquery->select('id')
-    //                         ->from('products')
-    //                         ->where('shop_id', $shop_id);
-    //                 });
-    //         })
-    //         ->get();
-    //         return response()->json($order);
-    //     }
-    // }
 }

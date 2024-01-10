@@ -44,9 +44,19 @@ class APIController extends Controller
     public function getComment($id_product)
     {
         $comments = Rating::where('product_id', $id_product)->get();
-        if ($comments->isEmpty()) {
-            return response()->json(['message' => 'Không tìm thấy bình luận cho product ID đã cho'], 404);
-        }
         return response()->json($comments);
+    }
+    public function addComment(Request $request)
+    {
+        $comments = new Rating();
+        $comments->comment = $request->comment;
+        $comments->rate = $request->rate;
+        $comments->user_id = $request->user_id;
+        $comments->product_id = $request->product_id;
+        $comments->save();
+        return response()->json([
+            'status' => 200,
+            'message' => 'Comment is ok',
+        ]);
     }
 }

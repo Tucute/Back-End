@@ -32,6 +32,7 @@ Route::post('update-user',[UserController::class,'UpdateUser']);
 // Auth
 Route::post('/register',[UserController::class,'Register']);
 Route::post('/login',[UserController::class,'Login']);
+
 Route::middleware(['auth:sanctum'])->group(function () {
     Route::post('/logout',[UserController::class,'Logout']);
 });
