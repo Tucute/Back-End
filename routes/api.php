@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\APIController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
@@ -52,3 +53,9 @@ Route::post('/update-product/{id}', [AdminController::class, 'updateProduct']);
 // Orders
 Route::get('/get-order', [OrderController::class, 'getOrder']);
 Route::post('/order', [OrderController::class, 'PlaceOrder']);
+
+// Carts
+Route::get('/get-cart',[CartController::class,'getCart']);
+Route::post('/add-to-cart',[CartController::class,'addToCart']);
+Route::put('/update-quantity/{cart_id}/{scope}',[CartController::class,'updateQuantity']);
+Route::delete('/delete/{cart_id}',[CartController::class,'Delete']);

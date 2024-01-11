@@ -9,4 +9,9 @@ class Rating extends Model
 {
     use HasFactory;
     protected $table = 'rating';
+    protected $with = ['user'];
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }

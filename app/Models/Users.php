@@ -16,4 +16,8 @@ class Users extends Model
     {
         return $this->belongsTo(Roles::class);
     }
+    public function ratings()
+    {
+        return $this->hasMany(Rating::class, 'user_id');
+    }
 }
